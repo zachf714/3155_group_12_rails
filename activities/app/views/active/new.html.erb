@@ -1,13 +1,13 @@
 <h1>New Activities</h1>
-<% form_for :active, url: actives_path do |f| %>
+<%= form_for :active do |f| %>
     <p>
         <%= f.label :title %><br>
-        <% f.text_field :title %>
+        <%= f.text_field :title %>
     </p>
     
     <p>
         <%= f.label :text %><br>
-        <% f.text_field :text %>
+        <%= f.text_field :text %>
     </p>
     
     <p>
