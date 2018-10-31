@@ -1,0 +1,2 @@
+class Preload < ApplicationRecord
+end
