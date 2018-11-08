@@ -10,11 +10,10 @@ class ActiveController < ApplicationController
     
     def show
         @preload = Preload.find(params[:id])
-        @user = User.find(params[:id])
     end
     
     def create
-        @user = User.new(user_params)
+        @preload = Preload.new(preload_params)
         
         if @user.save
             redirect_to @user
@@ -22,9 +21,13 @@ class ActiveController < ApplicationController
             render 'new'
         end
     end
+    
+    def edit
+        @preload = Preload.find(params[:id])
+    end
 end
 
 private
-    def user_params
-        params.requre(:user).permit(:title, :text)
+    def preload_params
+        params.requre(:preload).permit(:title, :text)
     end
