@@ -1,5 +1,4 @@
-class ActiveController < ApplicationController
-    
+class PreloadController < ApplicationController
     def index
         @active = Preload.all
         @user = User.all
@@ -33,3 +32,5 @@ private
     def preload_params
         params.require(:preload).permit(:title, :text)
     end
+
+

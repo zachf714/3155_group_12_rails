@@ -1,0 +1,16 @@
+<h1>Listing Locations</h1>
+
+<%= link_to 'New Location', new_active_path %>
+ 
+<table>
+  <tr>
+    <th>Location by Zip</th>
+  </tr>
+ 
+  <% @loaded.each do |preload| %>
+    <tr>
+      <td><%= preload.title %></td>
+      <td><%= link_to 'Show', active_path(preload.id) %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+
   
-  resources :active do
-    resources :users
+  resources :preload do
+    resource :users
   end
   
   root 'welcome#index'
