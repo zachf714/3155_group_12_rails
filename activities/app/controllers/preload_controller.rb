@@ -5,6 +5,7 @@ class PreloadController < ApplicationController
     end
     
     def new
+        @active = Preload.new
     end
     
     def show
@@ -14,8 +15,8 @@ class PreloadController < ApplicationController
     def create
         @active = Preload.new(preload_params)
         
-        if @user.save
-            redirect_to @user
+        if @active.save
+            redirect_to @active
         else
             render 'new'
         end

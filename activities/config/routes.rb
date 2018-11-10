@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resource :users
   end
   
+  post "preload/new", to: "preload#create"
+  
   root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
