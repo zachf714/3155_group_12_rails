@@ -3,34 +3,50 @@
 // Place all the styles related to the active controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
-    font-size: 75%;
+
+h2 {
+    font-size: 25px;
+    color:blue;
+    text-align:center;
+    font-family: sans-serif;
 }
 p {
     font-family:"Trebuchet MS", Helvetica, sans-serif;
     font-size: 140%;
 }
+tr {
+    font-size: 25px;
+    color:blue;
+    text-align:center;
+    font-family: sans-serif;
+}
 input[type=text] {
     width: 25%;
     padding: 12px 12px;
-    border: 2px solid #ccc;
-    background-color: #f8f8f8;
+    border: 2px solid #0097FF;
+    background-color: #D3EDFF;
 }
 textarea {
-    width: 25%;
-    height: 300px;
+    width: 50%;
+    height: 100px;
     padding: 12px 12px;
-    border: 2px solid #ccc;
-    background-color: #f8f8f8;
+    border: 2px solid #0097FF;
+    background-color: #D3EDFF;
     resize: none;
 }
 
 input[type=button], input[type=submit] {
     background-color: purple;
-    float: left;
     border: none;
     color: white;
     padding: 16px 20px;
     text-decoration: none;
     cursor: pointer;
+}
+
+table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:auto; 
+    margin-right:auto;
 }

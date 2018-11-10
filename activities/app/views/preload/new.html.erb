@@ -1,17 +1,24 @@
 <h1>New Activity</h1>
-<%= form_for :user, url: new_active_path do |f| %>
+<%= form_for :user, url: new_preload_path do |f| %>
     <p>
-        <%= f.label :zip %><br>
+        <h2>Activity Zip Code</h2>
         <%= f.text_field :zip %>
     </p>
     
     <p>
-        <%= f.label :body %><br>
-        <%= f.text_field :body %>
+        <h2>Activity Title</h2>
+        <%= f.text_field :title %>
     </p>
     
     <p>
-        <%= f.submit %>
+        <h2>Activity Description</h2>
+        <%= f.text_area :body %>
+    </p>
+    
+    <p>
+        <%= f.submit "Save Activity"%>
     </p>
     
 <% end %>
+
+<%= link_to 'Back', controller: 'preload' %>

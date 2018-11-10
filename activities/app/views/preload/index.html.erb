@@ -1,10 +1,8 @@
-<h1>Listing Locations</h1>
+<h1>Listing Activities by Location</h1>
 
-<%= link_to 'New Location', new_preload_path %>
- 
 <table>
   <tr>
-    <th>Location by Zip</th>
+    <th>Choose an Activity Location by Zip</th>
   </tr>
  
   <% @active.each do |preload| %>
@@ -14,3 +12,6 @@
     </tr>
   <% end %>
 </table>
+<p>- or -</p>
+<h2>Create a New Activity</h2>
+<%= link_to 'New Activity', new_preload_path %>
