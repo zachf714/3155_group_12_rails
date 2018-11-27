@@ -26,6 +26,16 @@ class PreloadController < ApplicationController
         @active = Preload.find(params[:id])
     end
     
+    def update
+        @active = Preload.find(params[:id])
+        
+        if @active.update(preload_params)
+            redirect_to @active
+        else
+            render 'edit'
+        end 
+    end
+    
     
 end
 
