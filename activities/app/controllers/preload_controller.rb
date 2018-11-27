@@ -36,6 +36,13 @@ class PreloadController < ApplicationController
         end 
     end
     
+    def destroy
+        @active = Preload.find(params[:id])
+        @active.destroy
+        
+        redirect_to preload_index_path
+    end
+    
     
 end
 
