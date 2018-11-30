@@ -1,25 +1,19 @@
-<p>
-  <strong>Location:</strong>
-  <%= @active.title %>
-</p>
- 
-<p>
-  <strong>Activity:</strong>
-  <%= @active.text %>
-</p>
+<h2>Posted Activities at <%= @active.title %></h2>
+<p>Below are activities that have already been posted at this location by the app!</p>
+
+<ol>
+    <li><strong><%= @active.text %></strong></li>
+</ol>
+
 <h2>User Added Activities</h2>
-<% @active.users.each do |user| %>
-  <p>
-    <strong>Location:</strong>
-    <%= user.zip %>
-  </p>
- 
-  <p>
-    <strong>Activity:</strong>
-    <%= user.body %>
-  </p>
-<% end %>
-<h2>Add an Activity:</h2>
+<p>Below are activities that have been posted by users!</p>
+  <ol>
+  <% @active.users.each do |user| %>
+    <li><strong><%= user.body %></strong></li>
+  <% end %>
+  </ol>
+  
+<h2>Add an Activity at <%= @active.title %>:</h2>
 <%= form_for([@active, @active.users.build]) do |f| %>
   <p>
     <%= f.label "Location" %><br>

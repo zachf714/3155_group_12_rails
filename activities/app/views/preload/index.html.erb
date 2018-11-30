@@ -7,18 +7,14 @@
     <%= link_to "Sign in with Google" , "/auth/google_oauth2" , id: "sign_in" %>
   <% end %>
 </div>
-
+<h2>Choose an Activity Location by Zip</h2>
 <table>
-  <tr>
-    <th>Choose an Activity Location by Zip</th>
-  </tr>
- 
   <% @active.each do |preload| %>
     <tr>
-      <td><%= preload.title %></td>
-      <td><%= link_to 'Show', preload_path(preload.id) %></td>
-      <td><%= link_to 'Edit', edit_preload_path(preload.id) %></td>
-      <td><%= link_to 'Destroy',
+      <td><%= preload.title %> -- </td>
+      <td><%= link_to 'View Activities', preload_path(preload.id) %> / </td>
+      <td><%= link_to 'Edit Zip', edit_preload_path(preload.id) %> / </td>
+      <td><%= link_to 'Delete Zip',
                               preload_path(preload.id),
                               method: :delete,
                               data: { confirm: 'Are you sure?' } %></td>
